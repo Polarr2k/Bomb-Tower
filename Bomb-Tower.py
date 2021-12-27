@@ -3,6 +3,9 @@
 # Bomb Tower
 
 import pygame
+
+clock = pygame.time.Clock()
+
 from pygame.locals import *
 
 pygame.init()
@@ -12,7 +15,6 @@ pygame.display.set_caption('Bomb Tower')
 displaySize = (1280,720)
 display = pygame.display.set_mode(displaySize)
 pygame.display.update()
-
 
 #Game loop
 running = True
@@ -24,6 +26,9 @@ while running:
         if event.type == KEYDOWN:
             if event.key == K_UP:
                 print("hi")
+    
+    pygame.display.update()
+    clock.tick(60)
 
 
 pygame.quit()
