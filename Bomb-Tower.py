@@ -16,12 +16,19 @@ displaySize = (1280,720)
 display = pygame.display.set_mode(displaySize)
 pygame.display.update()
 
-player = pygame.image.load('Untitled-1')
+player = pygame.image.load('Untitled-1.png')
+playerLocation =(0,0)
+
+screenColor = (0,0,0)
 
 #Game loop
 running = True
 while running:
     
+    display.fill(screenColor)
+
+    display.blit(player,playerLocation)
+
     for event in pygame.event.get():
         if event.type == QUIT:
             running = False
