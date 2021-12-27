@@ -16,6 +16,8 @@ displaySize = (1280,720)
 display = pygame.display.set_mode(displaySize)
 pygame.display.update()
 
+player = pygame.image.load('Untitled-1')
+
 #Game loop
 running = True
 while running:
